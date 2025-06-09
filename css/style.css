@@ -1,0 +1,277 @@
+/* IMPORT FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+
+:root {
+  /* colors */
+  --primary-color: rgb(26, 147, 247);
+  --secondary-color: rgb(29, 29, 31);
+  --third-color: rgb(240, 240, 240);
+  --fourth-color: rgb(6, 88, 155);
+
+  /* fonts */
+  --main-font: "Roboto", sans-serif;
+  --big-font: "Bebas Neue", sans-serif;
+
+  /* margin */
+  --general-margin: clamp(4rem, 4vw, 4.5rem);
+  --top-margin: clamp(1rem, 15vw, 40rem); /* gap between sector/elements */
+
+  /* border (radius) */
+  --general-border: 10px;
+
+  /* padding */
+  --general-padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  margin: 0;
+  font-family: var(--main-font);
+  background-color: var(--secondary-color);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--third-color); /* the default color for every text is white */
+}
+h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+h2,
+h3
+{
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: var(--big-font);
+}
+main,header {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+
+
+/* INDEX.html */
+header { /* in index the header take up all the heigh of the page*/
+    min-height: 100vh;
+  }
+#logo {
+  font-size: clamp(3rem, 4vw, 10rem);
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: var(--big-font);
+}
+
+/* links from all the header*/
+a {
+  transition: color 0.3s;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--third-color);
+}
+
+/* || header Nav */
+.main-nav {
+  text-transform: capitalize;
+}
+.main-nav li {
+  text-align: center;
+  padding: clamp(0.3rem, 4vw, 1rem);
+  list-style: none;
+}
+
+
+/* || ABOUT SECTION */
+.about {
+  margin-top: var(--top-margin);
+  justify-items: center;
+  align-items: center;
+  text-transform: capitalize;
+  color: var(--third-color);
+}
+
+.about-info > p { /* > ignore the rest */
+  line-height: 2;
+  text-align: justify;
+}
+
+
+.about img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--general-border);
+  box-shadow: 1px 1px 22px 1px var(--primary-color);
+}
+/* end index */
+
+
+
+/* || SKILLS */
+.skills {
+  margin-block: 5rem;
+  text-align: center;
+}
+.skills-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.skills-items h2,
+i {
+  font-size: clamp(5rem, 10vw, 8rem);
+}
+.skills-items i {
+  transition: all 0.4s;
+}
+.skills-items i:hover {
+  transform: scale(1.2);
+  color: var(--primary-color);
+}
+
+/*|| PROJECTS */
+
+.grid-items {
+  box-shadow: 1px 1px 9px rgb(148, 165, 184);
+  margin-block: var(--general-margin);
+  border-radius: var(--general-border);
+}
+
+.grid-items img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--general-border) var(--general-border) 0 0;
+}
+
+.project-link {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.project-link:hover {
+  background-color: var(--secondary-color);
+}
+.items-text {
+  margin-bottom: 1.5em;
+}
+
+
+
+
+/* || CONTACT */
+.form-container {
+  padding: var(--general-padding);
+  margin-block: var(--general-padding) var(--general-padding);
+}
+
+
+.form-container h2 {
+  text-align: center;
+}
+.form-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+input,
+textarea {
+    font-size: 1rem;
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+
+
+
+
+.form-items button{
+    border: none;
+    color: var(--third-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: var(--general-border);
+    transition: background-color .5s;
+}
+.form-items button:hover{
+      background-color: rgb(4, 59, 141);
+}
+
+
+
+
+/* FOOTER */
+footer {
+  padding: var(--general-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* the items will have a gap */
+}
+
+/* GENERAL */
+.text-strong {
+  color: var(--primary-color);
+}
+.no-m-p {
+  margin: 0;
+  padding: 0;
+}
+
+.general-padding {
+  padding: var(--general-padding);
+}
+
+
+
+
+
+/*KEYFRAMES*/
+
+.slide-in {
+  animation: slide-in 600ms; /* the items will be appear from the top */
+}
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/* MEDIA RESPONSIVE */
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .main-nav li {
+    display: inline-block;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    align-items: center;
+  }
+}
