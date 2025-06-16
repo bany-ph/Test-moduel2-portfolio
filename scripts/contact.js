@@ -10,9 +10,14 @@ form.addEventListener("submit", function(event){
     if(name.trim() === ''){
       
         message.innerHTML = "Name " + message2
+        return;
     }
     if(email.trim() == ''){
         message.innerHTML = "email " + message2
+        return;
     }
+
+    message.innerHTML = ""
+    this.submit();
 
 })
