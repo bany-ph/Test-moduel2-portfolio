@@ -1,4 +1,4 @@
-
+/* change theme */
 const local = localStorage.getItem('theme');
 
 if (local && local == 'light') {
@@ -22,3 +22,5 @@ function changeTheme(){
         localStorage.setItem("theme", "light")
     }
 }
+
+
