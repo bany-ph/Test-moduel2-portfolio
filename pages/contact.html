@@ -21,22 +21,23 @@
       <main>
             <section class="form-container grid-container slide-in">
                 <h2>Thank you!</h2>
-                <form action="" class="">
+                <form action="" id="form">
                     <div class="form-items">
                         <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your name">
+                        <input type="text" id="name" placeholder="Your name" >
                     </div>
                     <div class="form-items">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="example@gmail.com">
+                        <input type="email" id="email" placeholder="example@gmail.com" >
                     </div>
                     <div class="form-items">
                         <label for="message">Message</label>
                         <textarea name="message" id="message"></textarea>
                     </div>
                     <div class="form-items">
-                        <button type="button">SEND</button>
+                        <button type="submit">SEND</button>
                     </div>
+                    <p id="errorMessage"></p>
                 </form>
 
 
@@ -44,6 +45,7 @@
             </section>
       </main>
  
-      <script src="../script.js"></script>
+      <script src="../scripts/script.js"></script>
+      <script src="../scripts/contact.js"></script>
 </body>
 </html>
