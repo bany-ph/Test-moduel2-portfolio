@@ -226,6 +226,7 @@ i {
 
 input,
 textarea {
+  border-radius: 3px;
   border: 1px solid var(--third-color);
   font-size: 1rem;
   outline: none;
@@ -245,6 +246,14 @@ textarea {
 .form-items button:hover {
   background-color: rgb(4, 59, 141);
 }
+#errorMessage{
+  text-align: center;
+  color: red;
+}
+
+
+
+
 
 /* FOOTER */
 footer {
@@ -254,6 +263,13 @@ footer {
   align-items: center;
   gap: 1rem; /* the items will have a gap */
 }
+
+
+
+
+
+
+
 
 /* GENERAL */
 .text-strong {
@@ -267,6 +283,9 @@ footer {
 .general-padding {
   padding: var(--general-padding);
 }
+
+
+
 
 /*KEYFRAMES*/
 
