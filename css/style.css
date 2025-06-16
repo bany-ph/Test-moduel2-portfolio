@@ -24,32 +24,32 @@
   --general-padding: clamp(1rem, 3vw, 1.5rem);
 }
 
-.light:root{
+.light:root {
   --third-color: rgb(0, 0, 0);
   --secondary-color: rgb(255, 255, 255);
 }
 
 div.pace {
-	-webkit-pointer-events: none;
-	pointer-events: none;
+  -webkit-pointer-events: none;
+  pointer-events: none;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 div.pace-inactive {
-	display: none;
+  display: none;
 }
 
 div.pace .pace-progress {
-	background: #29d;
-	position: fixed;
-	z-index: 2000;
-	top: 0;
-	right: 100%;
-	width: 100%;
-	height: 2px;
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
 }
 
 * {
@@ -57,7 +57,6 @@ div.pace .pace-progress {
 }
 
 body {
-
   margin: 0;
   font-family: var(--main-font);
   background-color: var(--secondary-color);
@@ -68,22 +67,21 @@ h1 {
   font-size: clamp(2rem, 3vw, 3rem);
 }
 h2,
-h3
-{
+h3 {
   font-size: clamp(2rem, 4vw, 3rem);
   font-family: var(--big-font);
 }
-main,header {
+main,
+header {
   width: 90vw;
   margin: 0 auto;
 }
 
-
-
 /* INDEX.html */
-header { /* in index the header take up all the heigh of the page*/
-    min-height: 100vh;
-  }
+header {
+  /* in index the header take up all the heigh of the page*/
+  min-height: 100vh;
+}
 #logo {
   font-size: clamp(3rem, 4vw, 10rem);
   text-align: center;
@@ -104,6 +102,7 @@ a:hover {
 
 /* || header Nav */
 .main-nav {
+  text-align: center;
   text-transform: capitalize;
 }
 .main-nav li {
@@ -111,6 +110,23 @@ a:hover {
   padding: clamp(0.3rem, 4vw, 1rem);
   list-style: none;
 }
+/*  button for change color */
+#change-color-button {
+  cursor: pointer;
+  border: none;
+  border-radius: 1000%;
+  padding: var(--general-padding);
+  background-color: var(--third-color);
+
+
+}
+
+
+
+
+
+
+
 
 
 /* || ABOUT SECTION */
@@ -122,11 +138,11 @@ a:hover {
   color: var(--third-color);
 }
 
-.about-info > p { /* > ignore the rest */
+.about-info > p {
+  /* > ignore the rest */
   line-height: 2;
   text-align: justify;
 }
-
 
 .about img {
   max-width: 100%;
@@ -135,8 +151,6 @@ a:hover {
   box-shadow: 1px 1px 22px 1px var(--primary-color);
 }
 /* end index */
-
-
 
 /* || SKILLS */
 .skills {
@@ -194,15 +208,11 @@ i {
   margin-bottom: 1.5em;
 }
 
-
-
-
 /* || CONTACT */
 .form-container {
   padding: var(--general-padding);
   margin-block: var(--general-padding) var(--general-padding);
 }
-
 
 .form-container h2 {
   text-align: center;
@@ -213,32 +223,28 @@ i {
   gap: 10px;
   margin-bottom: 1rem;
 }
+
 input,
 textarea {
-    font-size: 1rem;
+  border: 1px solid var(--third-color);
+  font-size: 1rem;
   outline: none;
-  border: none;
+ 
   padding: 1rem;
 }
 
-
-
-
-.form-items button{
-    border: none;
-    color: var(--third-color);
-    background-color: var(--primary-color);
-    cursor: pointer;
-    padding: 1rem;
-    border-radius: var(--general-border);
-    transition: background-color .5s;
+.form-items button {
+  border: none;
+  color: var(--third-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: var(--general-border);
+  transition: background-color 0.5s;
 }
-.form-items button:hover{
-      background-color: rgb(4, 59, 141);
+.form-items button:hover {
+  background-color: rgb(4, 59, 141);
 }
-
-
-
 
 /* FOOTER */
 footer {
@@ -262,10 +268,6 @@ footer {
   padding: var(--general-padding);
 }
 
-
-
-
-
 /*KEYFRAMES*/
 
 .slide-in {
@@ -281,10 +283,6 @@ footer {
     opacity: 1;
   }
 }
-
-
-
-
 
 /* MEDIA RESPONSIVE */
 @media (min-width: 768px) {
